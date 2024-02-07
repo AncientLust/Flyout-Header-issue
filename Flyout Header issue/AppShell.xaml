@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Flyout_Header_issue.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Flyout_Header_issue"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Flyout_Header_issue">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                 HeightRequest="200">
+                <Image Aspect="AspectFill"
+                      Source="dotnet_bot.png"
+                      Opacity="0.6" />
+                <Label Text="Animals"
+                      TextColor="White"
+                      FontAttributes="Bold"
+                      HorizontalTextAlignment="Center"
+                      VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+            Title="Page1"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage1" />
+
+        <ShellContent
+            Title="Page2"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage2" />
+
+    </FlyoutItem>
+
+</Shell>
